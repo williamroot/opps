@@ -85,6 +85,11 @@ class Publisher(Date):
 
 
 class Publishable(Owned, Publisher):
+    feed_publishable = models.BooleanField(
+        _("Feed Publishable Content"),
+        help_text=_("Content will be on msn feed integration"),
+        default=True
+    )
     class Meta:
         abstract = True
 

@@ -27,7 +27,6 @@ class Article(Container):
     class Meta:
         abstract = True
 
-
 class Post(Article):
     content = models.TextField(_(u"Content"))
     albums = models.ManyToManyField(

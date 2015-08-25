@@ -50,7 +50,9 @@ class PostAdmin(HaystackModelAdmin, ContainerAdmin, AdminViewPermission):
         (_(u'Publication'), {
             'classes': ('extrapretty'),
             'fields': ('published', 'date_available',
-                       'show_on_root_channel', 'in_containerboxes')}),
+                       'show_on_root_channel', 'in_containerboxes',
+                       'feed_publishable')
+        }),
     )
 
 
@@ -77,7 +79,7 @@ class AlbumAdmin(HaystackModelAdmin, ContainerAdmin, AdminViewPermission):
         (_(u'Publication'), {
             'classes': ('extrapretty'),
             'fields': ('published', 'date_available',
-                       'show_on_root_channel')}),
+                       'show_on_root_channel', 'feed_publishable')}),
     )
 
 
