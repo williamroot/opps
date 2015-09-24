@@ -209,10 +209,8 @@ class ContainerImage(models.Model):
         on_delete=models.SET_NULL,
         verbose_name=_(u'Image'),
     )
-
-    caption = models.CharField(
+    caption = models.TextField(
         _(u"Caption"),
-        max_length=255,
         blank=True,
         null=True
     )
