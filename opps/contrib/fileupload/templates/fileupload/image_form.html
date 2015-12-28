@@ -44,7 +44,7 @@
        <strong>{{container.child_class}}</strong>: {{container.title}}<br />
        <strong>{% trans 'Channel' %}</strong>: {{container.channel}}<br />
     </div>
-    
+
     <ul class="grp-object-tools fileupload-buttonbar">
       <li>
         <a href="#" class="grp-state-focus fileinput-button">
@@ -109,6 +109,7 @@
 <script src="{{ STATIC_URL }}js/csrf.js"></script>
 <script>
 (function($){
+  $.ajaxSetup({async: false});
   $('#fileupload').bind('fileuploadsubmit', function (e, data) {
     var inputs = data.context.find(':input');
     if (inputs.filter('[required][value=""]').first().focus().length) {
